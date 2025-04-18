@@ -25,5 +25,21 @@ public class HelloRestController {
         return "Hello from Chitkara";
     }
     
+    /*UC2 - >Make REST Call to show Hello
+	Mark from BridgeLabz
+	- Use GET Request Method and pass name as
+	query parameter
+	- Use CURL to demonstrate the REST API Call
+	- curl localhost:8080/hello/query?name=Mark
+	-w "\n"*/
+    
+    // GET: http://localhost:8080/hello/query?name=Ashu
+    
+    @GetMapping("/query")
+    public String sayHelloQuery(@RequestParam(value = "name") String name) {
+        return "Hello " + name + "!";
+    }
+
+    
     
 }
