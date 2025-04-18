@@ -40,6 +40,23 @@ public class HelloRestController {
         return "Hello " + name + "!";
     }
 
+<<<<<<< HEAD
     
+=======
+    /*UC3 -> Make REST Call to show Hello
+	Mark from BridgeLabz
+	- Use GET Request Method and pass name as
+	path variable
+	- Use CURL to demonstrate the REST API Call
+	- curl localhost:8080/hello/param/Mark -w
+     "\n"*/
+    
+    // GET: http://localhost:8080/hello/param/Ashu
+    
+    @GetMapping("/param/{name}")
+    public String sayHelloParam(@PathVariable String name) {
+        return "Hello " + name + "!";
+    }
+>>>>>>> UC3_PathVariable
     
 }
